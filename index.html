@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whole Phones – Premium iPhones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2rem;
+      color: #0077be;
+      margin: 0;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #0077be;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(to right, #0077be, #00aaff);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    /* Product Grid */
+    .product-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .product-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #0077be;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #0077be;
+    }
+    .product-card p {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+    .product-card .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: #0077be;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .product-card .btn:hover {
+      background: #005f99;
+    }
+
+    /* Trust Section */
+    .trust {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      margin: 60px auto;
+      max-width: 1100px;
+      border-radius: 20px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    .trust h2 {
+      margin-bottom: 30px;
+      color: #0077be;
+    }
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .trust-item {
+      max-width: 250px;
+    }
+    .trust-item h4 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    /* Reviews Bubble */
+    .reviews-bubble {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .reviews-bubble h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #0077be;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .review-card {
+      background: #f9fbfd;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .review-card h4 {
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: bold;
+    }
+    .review-card .stars {
+      color: gold;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer p {
+      margin: 6px 0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header (nav only) -->
+  <header>
+    <h1 class="site-title">Whole Phones</h1>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+  <a href="cart.html" class="cart-link">Cart <span class="cart-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg></span><span id="cart-badge" class="cart-badge">0</span></a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <!-- Hero Banner -->
+<section class="hero">
+  <h2>Premium iPhones, Delivered</h2>
+  <p class="tagline">Trusted devices. Secure checkout. Free shipping on all orders.</p>
+  <p class="discount">✨ Limited Time: <strong>40% OFF</strong> every iPhone model ✨</p>
+</section>
+
+
+<!-- Product Showcase -->
+<section class="product-section">
+  <h2>Available iPhones</h2>
+  <div class="product-grid">
+
+    <!-- iPhone 13 (Best Seller) -->
+    <div class="product-card">
+      <div class="badge-best">Best Seller</div>
+      <img src="assets/images/iphone13.jpg" alt="iPhone 13" />
+      <h3>iPhone 13</h3>
+      <p class="price">
+        <span class="original-price">$599</span>
+        <span class="discounted-price">$299</span>
+      </p>
+      <a href="product.html?id=iphone13" class="btn">View Details</a>
+    </div>
+
+    <!-- iPhone 14 (Limited Stock) -->
+    <div class="product-card">
+      <div class="badge-stock">Limited Stock</div>
+      <img src="assets/images/iphone14.jpg" alt="iPhone 14" />
+      <h3>iPhone 14</h3>
+      <p class="price">
+        <span class="original-price">$699</span>
+        <span class="discounted-price">$349</span>
+      </p>
+      <a href="product.html?id=iphone14" class="btn">View Details</a>
+    </div>
+
+    <!-- iPhone 15 -->
+    <div class="product-card">
+      <img src="assets/images/iphone15.jpg" alt="iPhone 15" />
+      <h3>iPhone 15</h3>
+      <p class="price">
+        <span class="original-price">$799</span>
+        <span class="discounted-price">$399</span>
+      </p>
+      <a href="product.html?id=iphone15" class="btn">View Details</a>
+    </div>
+
+    <!-- iPhone 16 (Limited Stock) -->
+    <div class="product-card">
+      <div class="badge-stock">Limited Stock</div>
+      <img src="assets/images/iphone16.jpg" alt="iPhone 16" />
+      <h3>iPhone 16</h3>
+      <p class="price">
+        <span class="original-price">$899</span>
+        <span class="discounted-price">$449</span>
+      </p>
+      <a href="product.html?id=iphone16" class="btn">View Details</a>
+    </div>
+
+    <!-- iPhone 17 -->
+    <div class="product-card">
+      <img class="product-card-image" src="assets/images/iphone17.jpg" alt="iPhone 17" />
+      <h3>iPhone 17</h3>
+      <p class="price">
+        <span class="original-price">$999</span>
+        <span class="discounted-price">$499</span>
+      </p>
+      <a href="product.html?id=iphone17" class="btn">View Details</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Trust Section -->
+  <section class="trust">
+    <h2>Why Shop With Us</h2>
+    <div class="trust-items">
+      <div class="trust-item">
+        <h4>📦 Free Shipping</h4>
+        <p>Every order ships free, no minimum required.</p>
+      </div>
+      <div class="trust-item">
+        <h4>🔒 Secure Checkout</h4>
+        <p>Encrypted payments with trusted providers.</p>
+      </div>
+      <div class="trust-item">
+        <h4>🛡️ Warranty Included</h4>
+        <p>All devices come with a 1‑year limited warranty.</p>
+      </div>
+      <div class="trust-item">
+        <h4>💬 Customer Support</h4>
+        <p>Our team is here to help you 7 days a week.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/cart.js"></script>
+
+  <!-- Customer Reviews -->
+  <section class="reviews-bubble">
+    <h2>What Our Customers Say</h2>
+    <div class="review-grid">
+      <div class="review-card">
+        <h4>Marcus T.</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“Got my iPhone 13 in just 3 days. Packaging was secure and the phone looks brand new. Definitely ordering again.”</p>
+      </div>
+      <div class="review-card">
+        <h4>Sophia R.</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“The discount was real—I saved a ton. Phone works perfectly and customer service answered my questions fast.”</p>
+      </div>
+      <div class="review-card">
+        <h4>Daniel K.</h4>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p>“Honestly skeptical at first, but Whole Phones delivered. My iPhone 14 came unlocked and ready to use.”</p>
+      </div>
+      <div class="review-card">
+        <h4>Aaliyah M.</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“Love the graffiti vibe of the site. My iPhone 15 arrived flawless and the free shipping sealed the deal.”</p>
+      </div>
+      <div class="review-card">
+        <h4>Chris J.</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“Best online phone purchase I’ve made. Smooth checkout, clear tracking, and the phone is exactly as described.”</p>
+      </div>
+      <div class="review-card">
+        <h4>Elena V.</h4>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p>“I was worried about hidden fees, but nope—straightforward pricing and my iPhone 16 is perfect.”</p>
+      </div>
+      <div class="review-card">
+        <h4>Jordan P.</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“The promo code worked like a charm. Saved extra and still got free shipping. Highly recommend.”</p>
+      </div>
+      <div class="review-card">
+        <h4>Nina L.</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“Whole Phones feels legit. My iPhone 17 came in pristine condition, and I’ll be telling my friends.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Whole Phones. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <p>Need help? Contact us at <a href="mailto:support@wholephones.com">support@wholephones.com</a></p>
+  </footer>
+
+</body>
+</html>
+
+
+
